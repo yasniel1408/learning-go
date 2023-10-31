@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"time"
+)
 
 func main() {
 	fmt.Println("Init World")
@@ -29,6 +33,41 @@ func main() {
 	fmt.Println("BEFORE: The color is: ", color)
 	changeUsePointer(&color)
 	fmt.Println("AFTER: The color is: ", color)
+
+	// Struct
+	type User struct {
+		ID        int
+		FirstName string
+		LastName  string
+		address   string // Si la variable es minuscula es privada y si con mayuscula es publica, lo mismo para las funciones en un archivo
+		Age       int
+		BirthDate time.Time
+	}
+	user := User{
+		ID:        1,
+		FirstName: "Juan",
+		LastName:  "Perez",
+		// Address:  "Calle 123",
+		Age:       30,
+		BirthDate: time.Now(),
+	}
+	log.Println("The user is: ", user)
+	log.Println("The user name is: ", user.FirstName)
+	log.Println("The address is: ", user.address)
+
+	// Maps
+	type Person struct {
+		Name string // esta propiedad es publica pero si es con minuscula es privada, igual la podemos setear pero si decimos p.name = "Juan" es como si fuera el set
+	}
+	var p Person
+	p.Name = "Juan"
+
+	p2 := Person{
+		Name: "Pedro",
+	}
+
+	fmt.Println("The person is: ", p.Name)
+	fmt.Println("The person is: ", p2.Name)
 
 }
 
