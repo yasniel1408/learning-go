@@ -1,0 +1,7 @@
+mode: set
+github.com/yasniel1408/example/main.go:8.13,11.16 2 0
+github.com/yasniel1408/example/main.go:16.2,16.21 1 0
+github.com/yasniel1408/example/main.go:11.16,14.3 2 0
+github.com/yasniel1408/example/main.go:20.44,24.12 2 1
+github.com/yasniel1408/example/main.go:28.2,30.20 2 1
+github.com/yasniel1408/example/main.go:24.12,26.3 1 1
