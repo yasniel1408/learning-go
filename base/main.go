@@ -55,7 +55,7 @@ func main() {
 	log.Println("The user name is: ", user.FirstName)
 	log.Println("The address is: ", user.address)
 
-	// Maps
+	// Structs
 	type Person struct {
 		Name string // esta propiedad es publica pero si es con minuscula es privada, igual la podemos setear pero si decimos p.name = "Juan" es como si fuera el set
 	}
@@ -68,6 +68,44 @@ func main() {
 
 	fmt.Println("The person is: ", p.Name)
 	fmt.Println("The person is: ", p2.Name)
+
+	// If
+	var isTrue bool
+	isTrue = true
+	if isTrue { // o isTrue == true
+		log.Println("The value is true")
+	} else {
+		log.Println("The value is false")
+	}
+
+	var cat string
+	cat = "cat"
+	if cat == "cat" {
+		log.Println("Is cat")
+	} else {
+		log.Println("Is not cat")
+	}
+
+	var myNum int
+	myNum = 100
+	if myNum > 100 && !isTrue {
+		log.Println("OK")
+	} else if myNum < 100 && isTrue {
+		log.Println("KO")
+	}
+
+	// Switch
+	var day int
+	day = 0
+
+	switch day {
+	case 1:
+		log.Println("Monday")
+	case 2:
+		log.Println("Tuesday")
+	default:
+		log.Println("Other day")
+	}
 
 }
 
